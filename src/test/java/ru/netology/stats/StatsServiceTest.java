@@ -3,7 +3,7 @@ package ru.netology.stats;
 import static org.junit.jupiter.api.Assertions.*;
 
 class StatsServiceTest {
-    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+    int[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 15, 17};
 
     @org.junit.jupiter.api.Test
     void getTotalSale() {
@@ -39,7 +39,7 @@ class StatsServiceTest {
 
     @org.junit.jupiter.api.Test
     void getAmountMonthLowSales() {
-        int expected = 5;
+        int expected = 4;
         StatsService service = new StatsService();
         int actual = service.getAmountMonthLowSales(sales);
         assertEquals(actual, expected);
